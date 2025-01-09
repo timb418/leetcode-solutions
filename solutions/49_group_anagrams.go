@@ -30,7 +30,7 @@ func GroupAnagrams2(strs []string) [][]string {
 
 	for _, word := range strs {
 		count := [26]int{}
-		for i, _ := range word {
+		for i := range word {
 			count[word[i]-'a']++
 		}
 		m[count] = append(m[count], word)
